@@ -9,11 +9,12 @@ def t(n):
             y=[]
             for j in range(i+1):
                 if j==0 or j==i:
-                    y.append(l[i-1][j]+l[i][j-1])
-
+                    y.append(1)
+                else:
+                    y.append(l[i-1][j]+l[i-1][j-1])
             l.append(y)
     return l
 
 t(11)
 for i in range(len(t(11))):
-    print()
+    print(t(11)[i])
